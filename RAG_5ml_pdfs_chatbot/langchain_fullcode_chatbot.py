@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyCiiXf0MZRVNZ-Gp_0aSync99ywDfPSpfY")
+genai.configure(api_key="your_google_api_key")
 
 # loading and splitting the pdf files
 pdf_paths = ["Attention_is_All_You_Need.pdf", "BERT.pdf", "GPT_3.pdf", "language_image_pretraining_with_knowledge_graphs.pdf", "LLaMA.pdf"]
@@ -31,7 +31,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 retriever = vector_store.as_retriever(search_kwargs={"k":6})
 rag_chain = RetrievalQA.from_chain_type(
-    llm = ChatGoogleGenerativeAI(temperature=0,model="models/gemini-2.5-pro",google_api_key="AIzaSyCiiXf0MZRVNZ-Gp_0aSync99ywDfPSpfY"),
+    llm = ChatGoogleGenerativeAI(temperature=0,model="models/gemini-2.5-pro",google_api_key="your_google_api_key"),
     retriever = retriever,
     return_source_documents=True
 )
