@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>RAG Q&A</title></head>
+<body>
+  <h2>Ask a question</h2>
+  <form method="post">
+    <input name="query" style="width: 400px;" placeholder="Type your question">
+    <input type="submit">
+  </form>
+  {% if answer %}
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
