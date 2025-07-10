@@ -7,3 +7,5 @@ For the ease of importing all the libraries in python I included the requirement
 The actual backend code behind the chatbot is inside the langchain_fullcode_chatbot.py file
 
 The frontend is in the tempalates folder in the index.html file
+
+And for the last part a .ipynb file is also included which includes the code of both python and html and also the screenshots of some important questions 
